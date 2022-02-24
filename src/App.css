@@ -1,39 +1,79 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+.body {
+  background-color: darkgray;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  width: 50vw;
+  border-radius: 5px;
+}
+.container p {
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.form-group {
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+
+.form-label {
+  color: #aaa;
+  display: block;
+  opacity: 1;
+  width: 5rem;
+  cursor: text;
+  margin-left: 15px;
+  transform: translateY(-2rem);
+  transform-origin: 0 0;
+  transition: all 0.3s;
+}
+
+.form-control {
+  padding: 0.75rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: inherit;
+}
+.form-control::placeholder {
+  visibility: hidden;
+}
+
+.form-control:focus {
+  outline: 2px solid blue;
+  border: none;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+  transform: translateY(-3.2rem) scale(0.8);
+  background: #fff;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  color: blue;
+}
+
+.fa-spinner {
+  position: fixed;
+  color: blue;
+  bottom: 50%;
+  right: 50%;
+  font-size: 3rem;
 }
